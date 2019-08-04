@@ -15,5 +15,5 @@ account, last two digits of the Social Security Number(SSN), a unique 5-digit nu
 * Savings account holders are given a Locker and that's identified by 3-digit number and accesses with the 4-digit code.  
 * Current account holders are assigned a debit card with a 12-digit number and a 4-digit PIN.
 * Both accounts will use an interface that determines the base interest rate (In real time this information is gathered from some API. But I have written the API. )  
-* Our savings account will use .25 less than the base rate and our current accounts will not have any interest.  
+* Our savings account will use .25 less than the base rate and our current accounts will have 10% interest rate of base rate.  
 * The show info method should reveal relevant account information as well as information specific to the current account or savings account.  
