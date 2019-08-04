@@ -14,13 +14,20 @@ public class Savings extends Accounts {
 		setLocker();
 	}
 	
+	@Override
+	public void setRate() {
+		rate = getBaseRate() - 0.25;
+		
+	}
+	
+	
+	//List any methods specific to savings account
+	
 	private void setLocker() {
 		lockerID = (int) (Math.random()*Math.pow(10,3));
 		lockerKey = (int) (Math.random()*Math.pow(10, 4));
 	}
 	
-	
-	//List any methods specific to savings account
 	public void showInfo() {
 		System.out.println("ACCOUNT TYPE: Savings");
 		super.showInfo();

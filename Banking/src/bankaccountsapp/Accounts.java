@@ -21,9 +21,12 @@ public abstract class Accounts implements IBaseRate {
 		//Sets account number
 		index++;
 		this.accountNumber = setAccountNumber();
+		
+		setRate();
+		
 	}
 	
-	//List common methods 
+	public abstract void setRate();
 	
 	private String setAccountNumber() {
 		String lastTwoOfSSN = sSN.substring(sSN.length()-2,sSN.length());
@@ -32,11 +35,42 @@ public abstract class Accounts implements IBaseRate {
 		return lastTwoOfSSN + uniqueID + randomNumber;
 	}
 	
+	
+	//List common methods 
+	public void deposit(double amount) {
+		balance+= amount;
+		System.out.println("Depositing: Rs"+ amount);
+		printBalance();
+	}
+	
+	public void withdraw(double amount) {
+		if(balance>amount+5000) {
+			balance-= amount;
+			System.out.println("Successfull Withdrawal of Rs" +amount);
+			printBalance();
+		}
+		else System.out.println("Insufficient Balance");
+	}
+	
+	public void transfer(String toWhere , double amount) {
+		if(balance>amount+5000) {
+			balance-= amount;
+			System.out.println("Transferring Rs" + amount + " to " + toWhere);
+			printBalance();
+		}
+		else System.out.println("Insufficient Balance");
+	}
+	
+	public void printBalance() {
+		System.out.println("Your Balance is now: Rs" + balance);
+	}
+	
 	public void showInfo() {
 		System.out.println(
 				"NAME: " + name +
 				"\nACCOUNT NUMBER: "+ accountNumber +
-				"\nBALANCE: "+ balance
+				"\nBALANCE: "+ balance +
+				"\nRate: "+ rate
 				);
 	}
 	

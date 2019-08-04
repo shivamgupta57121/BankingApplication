@@ -13,12 +13,18 @@ public class Current extends Accounts  {
 		setDebitCard();
 	}
 	
+	@Override
+	public void setRate() {
+		rate = getBaseRate() * 0.1;
+	}
+	
+	//List any methods specific to current account
+	
 	private void setDebitCard() {
 		debitCardNumber = (int) (Math.random()*Math.pow(10,12));
 		debitCardPin = (int) (Math.random()*Math.pow(10, 4));	
 	}
 	
-	//List any methods specific to current account
 	public void showInfo() {
 		System.out.println("ACCOUNT TYPE: Current");
 		super.showInfo();
@@ -28,4 +34,5 @@ public class Current extends Accounts  {
 				"\n Debit Card Pin:" + debitCardPin 
 				);
 	}
+
 }
