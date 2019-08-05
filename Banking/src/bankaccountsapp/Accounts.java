@@ -4,13 +4,13 @@ package bankaccountsapp;
 
 public abstract class Accounts implements IBaseRate {
 	//List common properties for savings and checking account
-	String name;
-	String sSN ;
-	double balance;
+	private String name;
+	private String sSN ;
+	private double balance;
 	
-	static int index=10000;
-	String accountNumber;
-	double rate;
+	private static int index=10000;
+	protected String accountNumber;
+	protected double rate;
 	
 	//Constructor to set base properties and initialize the account
 	public Accounts(String name, String sSN, double initDeposit) {
@@ -35,6 +35,13 @@ public abstract class Accounts implements IBaseRate {
 		return lastTwoOfSSN + uniqueID + randomNumber;
 	}
 	
+	
+	public void compound() {
+		double accuredInterest = balance *(rate/100);
+		System.out.println("Accured Interest: Rs" + accuredInterest);
+		balance += accuredInterest;
+		printBalance();
+	}
 	
 	//List common methods 
 	public void deposit(double amount) {

@@ -3,8 +3,8 @@ package bankaccountsapp;
 public class Savings extends Accounts {
 
 	//List the properties specific to savings account
-	int lockerID;
-	int lockerKey;
+	private int lockerID;
+	private int lockerKey;
 	
 	
 	//Constructor to initialize savings account properties

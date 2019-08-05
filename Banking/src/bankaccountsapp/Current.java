@@ -3,8 +3,8 @@ package bankaccountsapp;
 public class Current extends Accounts  {
 
 	//List the properties specific to current account
-	int debitCardNumber;
-	int debitCardPin;
+	private int debitCardNumber;
+	private int debitCardPin;
 	
 	//Constructor to initialize current account properties
 	public Current(String name, String sSN, double initDeposit) {
