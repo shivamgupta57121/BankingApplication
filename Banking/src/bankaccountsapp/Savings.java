@@ -29,7 +29,7 @@ public class Savings extends Accounts {
 	}
 	
 	public void showInfo() {
-		System.out.println("ACCOUNT TYPE: Savings");
+		//System.out.println("ACCOUNT TYPE: Savings");
 		super.showInfo();
 		System.out.println(
 				" Your Savings Account Features" + 

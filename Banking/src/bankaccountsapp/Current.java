@@ -26,7 +26,7 @@ public class Current extends Accounts  {
 	}
 	
 	public void showInfo() {
-		System.out.println("ACCOUNT TYPE: Current");
+		//System.out.println("ACCOUNT TYPE: Current");
 		super.showInfo();
 		System.out.println(
 				" Your Current Account Features" + 
