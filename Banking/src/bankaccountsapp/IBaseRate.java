@@ -4,7 +4,7 @@ public interface IBaseRate {
 	
 	//Write a method that returns the base rate
 	default double getBaseRate() {
-		return 3.5;
+		return 4;
 	}
 	
 }
