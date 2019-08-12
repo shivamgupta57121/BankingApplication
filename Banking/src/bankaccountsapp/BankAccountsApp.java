@@ -22,7 +22,7 @@ public class BankAccountsApp {
 		
 		
 		//Read a CSV file then create new accounts based on that data
-		String file ="G:\\git\\BankingApplication\\NewBankAccounts.csv";
+		String file ="E:\\git\\BankingApplication\\NewBankAccounts.csv";
 		List <String[]> newAccountHolders = utilities.CSV.read(file); 
 		for(String[] accountHolder : newAccountHolders) {
 			String name = accountHolder[0];
